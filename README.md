@@ -12,7 +12,7 @@ takes input, negates it, adds 1
 
 FP sign bit = 11th bit of input
 how do we get exponent?
-E = 8 - leading 0s
+E = 8 - leading 0s (including sign bit 0)
 000110100110 has 3 leading 0s -> exponent = 5 (101)
 8 or greater leading zeros -> exponent = 0
 
@@ -21,8 +21,8 @@ significand
 000110100110 -> 1101 (we can get this more easily by shifting << # leading 0s)
 -> 110100110000 -> then get first 4 bits to get significand (11-8 bits)
 shifted = magnitude[11:8] = F
-<< shifting divides input by 2^(#shifted) (fills in with 0s)
->> denotes multiplication
+"<<" shifting divides input by 2^(#shifted) (fills in with 0s)
+">>" denotes multiplication
 
 Rounding
 based on fifth bit immediately following leading 0 (bit right after significand)
@@ -46,3 +46,9 @@ S = 0
 E = 000
 F = 1100
 
+Ex 2) 000110110110
+S = 0
+E = 5
+F = 1101
+Rounding = 1 -> F = 1110 and E = 6
+0 110 1110
