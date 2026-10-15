@@ -3,6 +3,7 @@ MSB = signed bit
 0th bit = LSB
 we're taking a 12 bit int 2's complement (if negative) -> 8 bit FP representation
 V = (-1)^s * F * 2^E
+FP = [ (1 S bit) (4 F bits) (3 E bits)]
 
 if #s negative we immediately do 2's complement, if not we keep as is 
 takes input, negates it, adds 1
