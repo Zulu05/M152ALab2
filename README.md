@@ -53,3 +53,13 @@ E = 5
 F = 1101
 Rounding = 1 -> F = 1110 and E = 6
 0 110 1110
+
+Ex 3) 100000000000 Edge case treat it like 2047
+S = 1 -> 011111111111 + 1 -> 100000000000 but ^ so treat it like 011111111111
+E = 7 
+F = 1111
+Edge case we cap F and E
+1 1111 111
+
+test bench = tb.v
+top level module = FPCVT.v
